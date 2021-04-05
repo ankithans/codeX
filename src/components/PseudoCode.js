@@ -2,7 +2,7 @@ import React from 'react'
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-python";
-import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-twilight";
 
 const PseudoCode = () => {
   return (
@@ -11,7 +11,7 @@ const PseudoCode = () => {
     <AceEditor
     className="ace h-50 bg-gray-800 w-auto"
     mode="python"
-    theme="github"
+    theme="twilight"
     name="UNIQUE_ID_OF_DIV"
     editorProps={{ $blockScrolling: true }}
   />
