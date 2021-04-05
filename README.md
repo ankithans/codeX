@@ -1,4 +1,9 @@
 # Frontend Architecture of Code-X
+1.Navbar
+2.Code Editor
+3.PseduoCode Editor
+4.Input/Output Command Box
+5.Warnings Section
 
 # Getting Started with Create React App
 
