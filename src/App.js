@@ -8,15 +8,22 @@ import Warnings from "./components/Warnings";
 function App() {
   return (
     <div>
+      {/*  */}
       <Navbar />
       <SplitterLayout>
         <div>
+          {/*  */}
           <CodeEditor />
+
+          {/* Ankit Hans */}
           <Compile />
         </div>
 
         <div>
+          {/* Aryamaan Pandey */}
           <PseudoCode />
+
+          {/*  */}
           <Warnings />
         </div>
       </SplitterLayout>
