@@ -6,7 +6,7 @@ export default function CodeEditor() {
     <div>
       <Editor
         className=""
-        height="70vh"
+        height="71vh"
         defaultLanguage="python"
         defaultValue="hello"
         theme="vs-dark"
