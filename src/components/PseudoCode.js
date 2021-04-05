@@ -6,8 +6,8 @@ import "ace-builds/src-noconflict/theme-twilight";
 
 const PseudoCode = () => {
   return (
-    <div className="pl-2 h-70">
-    <button className="bg-red-600 justify-end">Hello CodeX</button>
+    <div className="pl-2 h-70 justify-between items-center">
+    <button className="bg-red-600">Hello CodeX</button>
     <AceEditor
     className="ace h-50 bg-gray-800 w-auto"
     mode="python"
