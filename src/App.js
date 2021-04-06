@@ -7,24 +7,19 @@ import Warnings from "./components/Warnings";
 
 function App() {
   return (
-    <div>
-      {/*  */}
+    <div className="h-screen">
       <Navbar />
       <SplitterLayout>
         <div>
-          {/*  */}
-          <CodeEditor />
+          <PseudoCode />
 
-          {/* Ankit Hans */}
-          <Compile />
+          <Warnings />
         </div>
 
         <div>
-          {/* Aryamaan Pandey */}
-          <PseudoCode />
+          <CodeEditor />
 
-          {/*  */}
-          <Warnings />
+          <Compile />
         </div>
       </SplitterLayout>
     </div>
