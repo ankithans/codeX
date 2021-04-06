@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:focus {
+  outline: none;
+}
+
 .splitter-layout {
   position: absolute;
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100%;
+  height: 91%;
   overflow: hidden;
 }
 
@@ -39,6 +43,20 @@
 
 .splitter-layout.layout-changing > .layout-splitter {
   background-color: #aaa;
+}
+
+.splitter-layout.splitter-layout-vertical {
+  flex-direction: column;
+}
+
+.splitter-layout.splitter-layout-vertical.layout-changing {
+  cursor: row-resize;
+}
+
+.splitter-layout.splitter-layout-vertical > .layout-splitter {
+  width: 100%;
+  height: 4px;
+  cursor: row-resize;
 }
 
 .splitter-layout.splitter-layout-vertical {
