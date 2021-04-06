@@ -1,27 +1,21 @@
 import React, { useState } from "react";
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 export default function MyComponent() {
-  const [value, setValue] = useState('Pseudo Code will be generated here!!');
+  const [value, setValue] = useState("Pseudo Code will be generated here");
 
   return (
-    <div className="h-71vh">
-    <ReactQuill 
-    theme="snow" 
-    value={value} onChange={setValue}
-    className="bg-gray-100"/>
+    <div className="">
+      <ReactQuill
+        theme="snow"
+        value={value}
+        onChange={setValue}
+        className="bg-gray-100"
+      />
     </div>
   );
 }
-
-
-
-
-
-
-
-
 
 /*import React from 'react'
 import AceEditor from "react-ace";
