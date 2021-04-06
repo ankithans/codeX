@@ -7,6 +7,7 @@ export default function MyComponent() {
 
   return (
     <div className="">
+      <button className="bg-blue-400 hover:bg-red-500 rounded-lg">Translate Your Code</button>
       <ReactQuill
         theme="snow"
         value={value}
