@@ -8,7 +8,7 @@ export default function Navbar() {
           <p className="text-2xl font-bold text-grey-800">CodeX</p>
           <div className="flex">
             <a href="#"
-            className="rounded bg-blue-500 hover:bg-blue-700 text-white py-2 px-2"
+            className="rounded bg-blue-400 round-lg hover:bg-blue-700 text-white py-2 px-2"
             >Share Your Code</a>
           </div>
         </nav>

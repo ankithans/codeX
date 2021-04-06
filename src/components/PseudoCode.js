@@ -2,16 +2,16 @@ import React from 'react'
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-python";
-import "ace-builds/src-noconflict/theme-twilight";
+import "ace-builds/src-noconflict/theme-tomorrow_night_blue";
 
 const PseudoCode = () => {
   return (
     <div className="pl-2 h-70 justify-between items-center">
-    <button className="bg-green-600">Translate PseudoCode</button>
+    <button className="bg-gray-700 text-opacity-25">Translate PseudoCode</button>
     <AceEditor
-    className="ace h-50 bg-gray-800 w-auto"
+    className="ace h-50 bg-black-800 w-auto"
     mode="python"
-    theme="twilight"
+    theme="tomorrow_night_blue"
     fontSize={16}
     showGutter={true}
     showPrintMargin={true}
