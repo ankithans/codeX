@@ -72,3 +72,12 @@
   height: 4px;
   cursor: row-resize;
 }
+
+.ql-container {
+  font-size: inherit !important
+}
+
+
+.ql-container {
+  font-size: 20px;
+}

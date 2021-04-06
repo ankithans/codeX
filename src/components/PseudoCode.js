@@ -1,44 +1,19 @@
-import React from 'react';
-import { Editor } from '@tinymce/tinymce-react';
+import React, { useState } from "react";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
-class App extends React.Component {
-  handleEditorChange = (content, editor) => {
-    console.log('Content was updated:', content);
-  }
+export default function MyComponent() {
+  const [value, setValue] = useState('Pseudo Code will be generated here!!');
 
-  render() {
-    return (
-      <div className="">
-      <Editor
-        className="bg-gray-800"
-        apiKey="488o5w3xiru51euir8viv6uz4f6bprfa8w2kofbw8d2izohx"
-        init={{ /* your other settings */ }}
-        initialValue="<p>This is the initial content of the editor</p>"
-        init={{
-          height: 500,
-          menubar: false,
-          plugins: [
-            'advlist autolink lists link image charmap print preview anchor',
-            'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table paste code help wordcount'
-          ],
-          toolbar:
-            'undo redo | formatselect | bold italic backcolor | \
-            alignleft aligncenter alignright alignjustify | \
-            bullist numlist outdent indent | removeformat | help'
-        }}
-        onEditorChange={this.handleEditorChange}
-      />
-      </div>
-    );
-  }
+  return (
+    <div className="h-71vh">
+    <ReactQuill 
+    theme="snow" 
+    value={value} onChange={setValue}
+    className="bg-gray-100"/>
+    </div>
+  );
 }
-
-export default App;
-
-
-
-
 
 
 
@@ -57,7 +32,6 @@ import "ace-builds/src-noconflict/theme-tomorrow_night_blue";
 const PseudoCode = () => {
   return (
     <div className="pl-2 h-70 justify-between items-center">
-<<<<<<< HEAD
     <button className="bg-gray-700 text-opacity-25">Translate PseudoCode</button>
     <AceEditor
     className="ace h-50 bg-black-700 w-auto"
@@ -77,29 +51,6 @@ const PseudoCode = () => {
     name="UNIQUE_ID_OF_DIV"
     editorProps={{ $blockScrolling: true }}
   />
-=======
-      <button className="bg-gray-700 text-opacity-25">
-        Translate PseudoCode
-      </button>
-      <AceEditor
-        className="ace h-44 bg-black-800 w-auto"
-        mode="python"
-        theme="tomorrow_night_blue"
-        fontSize={16}
-        showGutter={true}
-        showPrintMargin={true}
-        highlightActiveLine={true}
-        setOptions={{
-          enableBasicAutocompletion: true,
-          enableLiveAutocompletion: true,
-          enableSnippets: true,
-          showLineNumbers: true,
-          tabSize: 2,
-        }}
-        name="UNIQUE_ID_OF_DIV"
-        editorProps={{ $blockScrolling: true }}
-      />
->>>>>>> 44cd0f26887106da9b11b7ceff7b7b819317842b
     </div>
   );
 };
