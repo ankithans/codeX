@@ -1,18 +1,23 @@
-import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import Editor from "@monaco-editor/react";
+import React from "react";
 
-export default function MyComponent() {
-  const [value, setValue] = useState("Pseudo Code will be generated here");
+export default function CodeEditor() {
+  const options = {
+    selectOnLineNumbers: true,
+    fontSize: 15,
+    formatOnType: true,
+    tabSize: 4,
+  };
 
   return (
-    <div className="">
-      <button className="bg-blue-400 hover:bg-red-500 rounded-lg">Translate Your Code</button>
-      <ReactQuill
-        theme="snow"
-        value={value}
-        onChange={setValue}
-        className="bg-gray-100"
+    <div className=" ">
+      <Editor
+        className="p-0.5"
+        height="60vh"
+        defaultLanguage="python"
+        defaultValue="//PseudoCode will be generated here!!!"
+        options={options}
+        theme="vs-dark"
       />
     </div>
   );

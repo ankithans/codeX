@@ -37,15 +37,15 @@ export default function Compile() {
       <div className="app  p-8 bg-grey-lightest font-sans">
         <div className="row sm:flex">
           <div className="col sm:w-1/2">
-            <div className="box border rounded flex flex-col shadow bg-white">
-              <div className="box__title bg-gray-100 px-3 py-2 border-b">
-                <h3 className="text-sm text-grey-darker font-medium">
+            <div className="box border rounded flex flex-col shadow bg-gray-700">
+              <div className="box__title bg-gray-700 px-3 py-2 border-b">
+                <h3 className="text-sm text-white font-medium">
                   Enter Custom Input
                 </h3>
               </div>
               <textarea
                 placeholder="hey"
-                className="text-gray-500 flex-1 p-2 m-1 bg-transparent"
+                className="text-white flex-1 p-2 m-1 bg-transparent"
                 name="tt"
               >
                 Here Input will come
@@ -54,12 +54,12 @@ export default function Compile() {
           </div>
 
           <div className="col mt-8 sm:ml-8 sm:mt-0 sm:w-1/2">
-            <div className="box border rounded flex flex-col shadow bg-white">
-              <div className="box__title bg-gray-100 px-3 py-2 border-b">
-                <h3 className="text-sm text-grey-darker font-medium">Output</h3>
+            <div className="box border rounded flex flex-col shadow bg-gray-700">
+              <div className="box__title bg-gray-700 px-3 py-2 border-b">
+                <h3 className="text-sm text-grey-darker font-medium text-white">Output</h3>
               </div>
               <textarea
-                className="text-gray-500 flex-1 p-2 m-1 bg-transparent"
+                className="text-white flex-1 p-2 m-1 bg-transparent"
                 name="tt"
               >
                 Here output will come

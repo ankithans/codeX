@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^27.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
     "@craco/craco": "^6.1.1",
     "@monaco-editor/react": "^4.1.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -10,6 +12,7 @@
     "@testing-library/user-event": "^12.1.10",
     "@tinymce/tinymce-react": "^3.12.2",
     "ace-builds": "^1.4.12",
+    "bootstrap": "^4.6.0",
     "craco": "^0.0.3",
     "draft-js": "^0.11.7",
     "jodit-react": "^1.0.74",
@@ -20,6 +23,7 @@
     "react-rte": "^0.16.3",
     "react-scripts": "4.0.3",
     "react-splitter-layout": "^4.0.0",
+    "react-summernote": "^2.0.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
