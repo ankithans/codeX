@@ -9,7 +9,7 @@ export default function Navbar() {
           <div className="flex">
             <a
               href="#"
-              className="rounded bg-blue-400 round-lg hover:bg-blue-700 text-white py-2 px-2"
+              className="rounded bg-gray-700 round-lg hover:bg-indigo-700 text-white py-2 px-2"
             >
               Share Your Code
             </a>
