@@ -11,7 +11,7 @@ export default function CodeEditor() {
 
   return (
     <div className=" ">
-      <button className="bg-gray-700 text-white rounded-lg hover:bg-indigo-600 p-1">Translate Your Code</button>
+     
       <Editor
         className="p-0.5"
         height="60vh"
@@ -20,6 +20,7 @@ export default function CodeEditor() {
         options={options}
         theme="vs-dark"
       />
+       <button className="bg-gray-700 text-white rounded-lg hover:bg-indigo-600 p-2">Translate Your PseudoCode</button>
     </div>
   );
 }
