@@ -1,10 +1,54 @@
 import Editor, { loader } from "@monaco-editor/react";
 import React, { useState } from "react";
 import axios from "axios";
+import Flowchart from "react-simple-flowchart";
 
 export default function CodeEditor({ code }) {
   const [pseudo, setPseudo] = useState("");
   const [isLoading, setLoading] = useState(false);
+
+  const codee = `st2077924065536=>start: start main
+  io2077924065584=>inputoutput: input:
+  io2077924067120=>inputoutput: output:  print('Welcome to CodeX')
+  e2077924066112=>end: end function return
+  
+  st2077924065536->io2077924065584
+  io2077924065584->io2077924067120
+  io2077924067120->e2077924066112`;
+
+  const opt = {
+    x: 0,
+    y: 0,
+    "line-width": 3,
+    "line-length": 50,
+    "text-margin": 10,
+    "font-size": 14,
+    "font-color": "black",
+    "line-color": "black",
+    "element-color": "black",
+    fill: "white",
+    "yes-text": "yes",
+    "no-text": "no",
+    "arrow-end": "block",
+    scale: 1,
+    symbols: {
+      start: {
+        "font-color": "red",
+        "element-color": "green",
+        "font-weight": "bold",
+      },
+      end: {
+        "font-color": "red",
+        "element-color": "green",
+        "font-weight": "bold",
+      },
+    },
+    flowstate: {
+      department1: { fill: "pink" },
+      department2: { fill: "yellow" },
+      external: { fill: "green" },
+    },
+  };
 
   const onSubmitCode = async (e) => {
     try {
@@ -48,6 +92,7 @@ export default function CodeEditor({ code }) {
         value={pseudo}
         
       /> */}
+      <Flowchart chartCode={codee} options={opt} onClick={() => {}} />
       <div>{pseudo}</div>
       {isLoading ? (
         <div>loading...</div>
