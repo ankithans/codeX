@@ -9,6 +9,8 @@ export default function CodeEditor({ code }) {
 
   const [flow, setFlow] = useState("");
 
+  const [lang, setLang] = useState("");
+
   const generateFlow = async (e) => {
     try {
       e.preventDefault();
@@ -24,6 +26,29 @@ export default function CodeEditor({ code }) {
 
       setLoading(false);
       setFlow(res.data);
+
+      console.log(res.data);
+    } catch (err) {
+      setLoading(false);
+      console.log(err);
+    }
+  };
+
+  const translate = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+
+      const res = await axios.post(
+        "https://pseudo-x.herokuapp.com/api/v1/translate/",
+        {
+          text: pseudo,
+          dest_lang: lang,
+        }
+      );
+
+      setLoading(false);
+      setPseudo(res.data);
 
       console.log(res.data);
     } catch (err) {
@@ -140,6 +165,40 @@ export default function CodeEditor({ code }) {
       <div className="pt-12" role="alert">
         <div class="bg-green-500 text-white flex justify-between font-bold rounded-t px-4 py-2">
           <div>Generate PseudoCode</div>
+
+          <div class="relative inline-flex">
+            <svg
+              class="w-2 h-1 absolute top-0 right-0 m-4 pointer-events-none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 412 232"
+            >
+              <path
+                d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z"
+                fill="#648299"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <select
+              onChange={(e) => {
+                setLang(e.target.value);
+              }}
+              onClick
+              class="border border-gray-300 rounded-full text-gray-600 h-8 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+            >
+              <option>Choose Language </option>
+              <option>hi</option>
+              <option>de</option>
+            </select>
+          </div>
+
+          <div className="pt-0.5 px-4 bg-green-700 rounded-md">
+            <div className="" onClick={translate}>
+              submit
+            </div>
+          </div>
+
+          <div></div>
+          <div></div>
 
           <div className="px-2 py-1 pl-3 bg-gray-600 hover:bg-gray-400 rounded-md">
             <div onClick={onSubmitCode} className="p-0 m-0">
