@@ -31,7 +31,7 @@ Test and Compile feature is also available on this website, so that user can cro
 ![ss1](mockups/ss6.png)
 
 ## Presentation
-![PPT](https://docs.google.com/presentation/d/1R767ack-2fZx-W1FVFHRi0XrrJph0PCmLfz5FjJ0Zzk/edit?usp=sharing)
+[PPT](https://docs.google.com/presentation/d/1R767ack-2fZx-W1FVFHRi0XrrJph0PCmLfz5FjJ0Zzk/edit?usp=sharing)
 
 ## Video
 
