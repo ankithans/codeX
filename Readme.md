@@ -13,5 +13,7 @@ Sometimes we write some code or we copy the code from some resource but we canâ€
 ## Tech Stack
 
 ## Contributors
+Ankit Hans
+Aryamaan Pandey
 
 Link to deployed URL - [CodeX](http://coderx.surge.sh)
