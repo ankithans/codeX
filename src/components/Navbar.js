@@ -36,12 +36,9 @@ export default function Navbar({ code }) {
           size="45"
           className="pt-2 pl-4 text-gray-100 font-semibold"
         />
-        <a
-          href="#"
-          className="flex-no-grow mt-1 font-bold text-2xl flex-no-shrink relative py-4 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark"
-        >
+        <div className="flex-no-grow mt-1 font-bold text-2xl flex-no-shrink relative py-4 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark">
           CodeX
-        </a>
+        </div>
       </div>
       <div>{url}</div>
       <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">

@@ -24,12 +24,12 @@ export default function Compile({ code }) {
       setLoading(false);
       console.log(res.data.run_status.status);
       if (
-        res.data.run_status.stderr != undefined &&
-        res.data.run_status.stderr == "" &&
-        res.data.compile_status == "OK"
+        res.data.run_status.stderr !== undefined &&
+        res.data.run_status.stderr === "" &&
+        res.data.compile_status === "OK"
       )
         setOutput(res.data.run_status.output);
-      else if (res.data.compile_status != "OK")
+      else if (res.data.compile_status !== "OK")
         setOutput(res.data.compile_status);
       else setOutput(res.data.run_status.stderr);
       // console.log(res.data.run_status.stderr);
