@@ -8,19 +8,19 @@ Link to deployed URL - [CodeX](http://coderx.surge.sh)
 
 ## Project Description
 
-Sometimes we write some code or we copy the code from some resource but we can’t interpret the working/logic behind the code. While writing the code when we get stuck in some problem, we directly redirect to stackoverflow or github but from there we don’t get in depth knowledge about the code.
+Sometimes we write some code or we copy the code from some resource but we can’t interpret the working/logic behind the code. While writing the code when we get stuck in some problem, we directly redirect to StackOverflow or GitHub but from there we don’t get in-depth knowledge about the code.
 
-To solve the particular problem we have build a website to interpret the complex code easily. Through this website, we are targeting to deliver comprehensive analysis of the code with the help of machine learning. With the help of machine learning we are planning to add automatic generation of pseudo code based on the user's input.
+To solve the particular problem we have to build a website to interpret the complex code easily. Through this website, we are targeting to deliver a comprehensive analysis of the code with the help of machine learning. With the help of machine learning, we are planning to add automatic generation of pseudocode based on the user's input.
 
-While writing code you will also get realtime recommendations to improve your code quality as per industry standards.
+While writing code you will also get real-time recommendations to improve your code quality as per industry standards.
 
-We are also providing the translation of pseudocode in 118 global languages, because people from non-english speaking countries find it difficult to understand the pseudocode in English, So we decided to extend our helping hand to them.
+We are also providing the translation of pseudocode in 118 global languages because people from non-English speaking countries find it difficult to understand the pseudocode in English, So we decided to extend our helping hand to them.
 
-The automatic generated pseudo code will act as a blueprint and will help our users to understand the code better. Apart from this we have given flow chart generation which will help the user to comprehend the code better because visual things have much greater impact on human brain as compared to textual format.
+The automatically generated pseudo code will act as a blueprint and will help our users to understand the code better. Apart from this, we have given flow chart generation which will help the user to comprehend the code better because visual things have a much greater impact on the human brain as compared to textual format.
 
-You can share your code by clicking just a button. It will give a unique URL to your code to share it with your friends, colleagues or teachers.
+You can share your code by clicking just a button. It will give a unique URL to your code to share with your friends, colleagues, or teachers.
 
-Test and Compile feature is also available on this website, so that user can cross-check his / her output based on the input.
+Test and Compile feature is also available on this website so that users can cross-check his / her output based on the input.
 
 ## Mockups
 
