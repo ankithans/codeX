@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+uvicorn = "*"
+fastapi = "*"
+python-decouple = "*"
+requests = "*"
+python-multipart = "*"
+pylint = "*"
+google-trans-new = "*"
+databases = "*"
+sqlalchemy = "*"
+aiosqlite = "*"
+pyflowchart = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
