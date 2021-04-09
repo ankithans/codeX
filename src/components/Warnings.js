@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Warnings({ code }) {
-  const [warnings, setWarnings] = useState("");
+  const [warnings, setWarnings] = useState("Click on Show Warnings Button");
   const [isLoading, setLoading] = useState(false);
 
   const onSubmitCode = async (e) => {
@@ -19,7 +19,16 @@ export default function Warnings({ code }) {
       );
 
       setLoading(false);
-      setWarnings(res.data);
+
+      var war;
+
+      for (var i = 0; i < res.data.length; i++) {
+        war += res.data[i] + "\n";
+      }
+
+      console.log(war);
+
+      setWarnings(war);
 
       // console.log(res.data.run_status);
     } catch (err) {
@@ -29,34 +38,27 @@ export default function Warnings({ code }) {
   };
 
   return (
-    <div className="card">
-      <div className="col mt-1 sm:ml-20 sm:mt-20 sm:w-1/2 p-0.10 shadow-sm rounded-lg">
-        <div className="box border rounded flex flex-col shadow bg-gray-700 h-40 w-58">
-          <div className="box__title bg-gray-700 px-3 py-2 border-b">
-            <h3 className="text-sm text-grey-darker font-medium text-red-500">
-              Warnings!
-            </h3>
-          </div>
-          <textarea
-            className="text-gray-100 flex-1 p-2 m-1 bg-transparent h-full"
-            name="tt"
-            value={warnings}
-          >
-            Warnings will come here!!
-          </textarea>
+    <div className="p-8 pt-32">
+      <div role="alert">
+        <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+          Code Suggestions
         </div>
-        {isLoading ? (
-          <div>loading...</div>
-        ) : (
-          <button
-            onClick={onSubmitCode}
-            class="ml-5 bg-red-700 h-10 text-white active:bg-green-300 font-medium uppercase text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-            type="button"
-          >
-            Show Warnings
-          </button>
-        )}
+        <div class="border border-t-0  rounded-b h-auto bg-red-100 px-4 py-3 text-red-800">
+          <div className="whitespace-pre-wrap">{warnings}</div>
+        </div>
       </div>
+
+      {isLoading ? (
+        <div>loading...</div>
+      ) : (
+        <button
+          onClick={onSubmitCode}
+          className="mt-5 bg-red-500 h-10 text-white active:bg-green-300 font-medium uppercase text-sm px-6 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button"
+        >
+          Show Warnings
+        </button>
+      )}
     </div>
   );
 }
