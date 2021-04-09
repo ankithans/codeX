@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-gray-100">
       <Navbar />
       <SplitterLayout>
         <div>
@@ -35,7 +35,7 @@ function App() {
 
         <div>
           <Editor
-            className="p-0.5"
+            className="pt-3"
             height="60vh"
             defaultLanguage="python"
             defaultValue={initialCode}
