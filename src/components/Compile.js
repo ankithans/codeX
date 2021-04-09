@@ -19,8 +19,20 @@ export default function Compile({ code }) {
         }
       );
 
+      console.log(res.data);
+
       setLoading(false);
-      setOutput(res.data.run_status.output);
+      console.log(res.data.run_status.status);
+      if (
+        res.data.run_status.stderr != undefined &&
+        res.data.run_status.stderr == "" &&
+        res.data.compile_status == "OK"
+      )
+        setOutput(res.data.run_status.output);
+      else if (res.data.compile_status != "OK")
+        setOutput(res.data.compile_status);
+      else setOutput(res.data.run_status.stderr);
+      // console.log(res.data.run_status.stderr);
 
       // console.log(res.data.run_status);
     } catch (err) {
@@ -34,32 +46,30 @@ export default function Compile({ code }) {
       <div className="app  p-8 bg-grey-lightest font-sans">
         <div className="row sm:flex">
           <div className="col sm:w-1/2">
-            <div className="box border rounded flex flex-col shadow bg-gray-700">
-              <div className="box__title bg-gray-700 px-3 py-2 border-b">
+            <div className="box border rounded flex flex-col shadow bg-gray-300">
+              <div className="box__title bg-gray-600 px-3 py-2 border-b">
                 <h3 className="text-sm text-white font-medium">
                   Enter Custom Input
                 </h3>
               </div>
               <textarea
-                placeholder="hey"
-                className="text-white flex-1 p-2 m-1 bg-transparent"
+                placeholder="input"
+                className="text-gray-700 flex-1 p-2 m-1 bg-transparent"
                 name="tt"
                 onChange={(e) => setInput(e.target.value)}
-              >
-                Here Input will come
-              </textarea>
+              ></textarea>
             </div>
           </div>
 
           <div className="col mt-8 sm:ml-8 sm:mt-0 sm:w-1/2">
-            <div className="box border rounded flex flex-col shadow bg-gray-700">
-              <div className="box__title bg-gray-700 px-3 py-2 border-b">
+            <div className="box border rounded flex flex-col shadow bg-gray-300">
+              <div className="box__title bg-gray-600 px-3 py-2 border-b">
                 <h3 className="text-sm text-grey-darker font-medium text-white">
                   Output
                 </h3>
               </div>
               <textarea
-                className="text-white flex-1 p-2 m-1 bg-transparent"
+                className="text-gray-700 flex-1 p-2 m-1 bg-transparent"
                 name="tt"
                 value={output}
               >

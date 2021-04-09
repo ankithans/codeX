@@ -14,8 +14,7 @@ function App() {
     tabSize: 4,
   };
 
-  const initialCode =
-    "\ndef main():\n  # You can do a lot here\n  # So I am writing this to fill lines\n  # Let's fill the empty space\n\n  return print('Welcome to CodeX')\n\ndef hello():\n  print('Hello CodeX')\n\ndef mul(a, b):\n  return a * b\n\ndef div(a, b):\n  return a / b\n\nprint('Yo!, Click on compile and Test')n\n\n\n\n\n";
+  const initialCode = "# Add Some Python Code";
 
   const [code, setCode] = useState(initialCode);
 
