@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="h-screen bg-gray-100">
-      <Navbar />
+      <Navbar code={code} />
       <SplitterLayout>
         <div>
           <PseudoCode code={code} />
