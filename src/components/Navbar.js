@@ -20,7 +20,7 @@ export default function Navbar({ code }) {
       );
 
       setLoading(false);
-      setUrl("http://localhost:3000/" + res.data.id);
+      setUrl("https://coderx.surge.sh/" + res.data.id);
 
       console.log(res.data);
     } catch (err) {
@@ -40,9 +40,19 @@ export default function Navbar({ code }) {
           CodeX
         </div>
       </div>
-      <div>{url}</div>
       <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
         <div className="lg:flex lg:items-stretch lg:justify-end ml-auto">
+          {url == "" ? (
+            <div></div>
+          ) : (
+            <div className="text-gray-400 pt-3">
+              {" "}
+              Share your code with this link:{"   "}
+              <a target="_blank" className="text-white pt-3" href={url}>
+                {url}
+              </a>
+            </div>
+          )}
           <div className="mx-32 my-1 md:mx-10 md:my-2  rounded-md  bg-indigo-400">
             {isLoading ? (
               <div>loading...</div>
