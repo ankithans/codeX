@@ -6,6 +6,9 @@ Link to deployed URL - [CodeX](http://coderx.surge.sh) & [Backend API](https://p
 
 ![codeX architecture](mockups/codex_architecture.png)
 
+## Achievements🏆
+Team Uhtred won the Runner's Up Prize at Rackathon 2021 organized by Rakuten India
+
 ## Project Description
 
 Sometimes we write some code or we copy the code from some resource but we can’t interpret the working/logic behind the code. While writing the code when we get stuck in some problem, we directly redirect to StackOverflow or GitHub but from there we don’t get in-depth knowledge about the code.
