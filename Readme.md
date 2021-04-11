@@ -1,6 +1,6 @@
 # CodeX
 
-Link to deployed URL - [CodeX](http://coderx.surge.sh)
+Link to deployed URL - [CodeX](http://coderx.surge.sh) & [Backend API](https://pseudo-x.herokuapp.com/docs)
 
 [CodeX](http://coderx.surge.sh) is a platform which converts code into easy to understand language.
 
