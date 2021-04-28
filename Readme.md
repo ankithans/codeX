@@ -7,7 +7,7 @@ Link to deployed URL - [CodeX](http://coderx.surge.sh) & [Backend API](https://p
 ![codeX architecture](mockups/codex_architecture.png)
 
 ## Achievements🏆
-Team Uhtred won the Runner's Up Prize at Rackathon 2021 organized by Rakuten India
+Team Uhtred won the Runner's Up Prize at Rakathon 2021 organized by Rakuten India
 
 ## Project Description
 
